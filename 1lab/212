@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел | Лабораторная 1</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        .task-list {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+        .todo-text {
+            font-size: 18px;
+        }
+        .delete-btn {
+            color: #e74c3c;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            font-size: 16px;
+        }
+        input {
+            flex-grow: 1;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .checkbox {
+            margin-right: 12px;
+            transform: scale(1.3);
+            cursor: not-allowed;
+        }
+        .instructions {
+            background-color: #f1f8ff;
+            border-left: 5px solid #3498db;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторная 1. HTML</h1>
+
+    <h2>Презентация по HTML</h2>
+
+    <div class="instructions">
+        <h3>Обязательная часть</h3>
+        <ul>
+            <li>Сверстать заготовку (некликабельный макет) будущего веб-приложения.</li>
+            <li>Проследить, что title страницы не пустой.</li>
+            <li>Добавить favicon (картинка, отображающаяся на вкладке рядом с title’ом).</li>
+            <li>В процессе можно пользоваться презентацией.</li>
+            <li>Результат закоммитить на гигхаб и прислать ссылку на проект.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Список дел</h2>
+
+    <div class="task-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Новый элемент списка</th>
+                    <th>Создать</th>
+                    <th>Очистить всё</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Введите задачу..." readonly></td>
+                    <td><button disabled>Создать</button></td>
+                    <td><button disabled>Очистить всё</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="todo-item">
+            <div>
+                <input type="checkbox" class="checkbox" disabled>
+                <span class="todo-text">Почесать кошку</span>
+            </div>
+            <button class="delete-btn" disabled>❌</button>
+        </div>
+        <div class="todo-item">
+            <div>
+                <input type="checkbox" class="checkbox" disabled>
+                <span class="todo-text">Полить картошку</span>
+            </div>
+            <button class="delete-btn" disabled>❌</button>
+        </div>
+        <div class="todo-item">
+            <div>
+                <input type="checkbox" class="checkbox" disabled>
+                <span class="todo-text">Сложить в лукошко</span>
+            </div>
+            <button class="delete-btn" disabled>❌</button>
+        </div>
+    </div>
+
+    <footer>
+        Макет веб-приложения "Список дел" | Лабораторная работа по HTML
+    </footer>
+
+</body>
+</html>
+
