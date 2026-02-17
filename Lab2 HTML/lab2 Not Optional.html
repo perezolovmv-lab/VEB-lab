@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список дел</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+  <main class="app">
+    <h1 class="app__title">Список дел</h1>
+
+    <section class="controls">
+      <input class="controls__input" type="text" placeholder="Новый элемент списка" />
+      <button class="btn btn--gray" type="button">Создать</button>
+      <button class="btn btn--red" type="button">Очистить всё</button>
+    </section>
+
+    <!-- Прокручиваемый список -->
+    <section class="list">
+      <div class="list__scroll">
+        <div class="item item--done">
+          <span class="item__icon item__icon--check">✔</span>
+          <span class="item__text item__text--done">Почесать кошку</span>
+          <span class="item__icon item__icon--x">✖</span>
+        </div>
+
+        <div class="item">
+          <span class="item__icon item__icon--check">✔</span>
+          <span class="item__text">Полить картошку</span>
+          <span class="item__icon item__icon--x">✖</span>
+        </div>
+
+        <div class="item">
+          <span class="item__icon item__icon--check">✔</span>
+          <span class="item__text">Сложить в лукошко</span>
+          <span class="item__icon item__icon--x">✖</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Пустое состояние (включишь, когда список пустой) -->
+    <!-- <div class="empty">Не найдено ни одного дела</div> -->
+  </main>
+</body>
+</html>
+
