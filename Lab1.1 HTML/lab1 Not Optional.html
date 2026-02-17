@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список дел</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <style>
+        body {
+            background-color: #dcdcdc;
+            font-family: Georgia, serif;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin-bottom: 40px;
+        }
+
+        .controls {
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 20px;
+            width: 350px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-left: 5px;
+            cursor: default; /* макет некликабельный */
+        }
+
+        ol {
+            font-size: 28px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .delete-btn {
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+            border: 1px solid gray;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Список дел</h1>
+
+    <div class="controls">
+        <input type="text" placeholder="Новый элемент списка">
+        <button>Создать</button>
+        <button>Очистить всё</button>
+    </div>
+
+    <ol>
+        <li>
+            <input type="checkbox">
+            Почесать кошку
+            <span class="delete-btn">✖</span>
+        </li>
+
+        <li>
+            <input type="checkbox">
+            Полить картошку
+            <span class="delete-btn">✖</span>
+        </li>
+
+        <li>
+            <input type="checkbox">
+            Сложить в лукошко
+            <span class="delete-btn">✖</span>
+        </li>
+    </ol>
+
+</body>
+</html>
