@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Кодировка -->
+    <meta charset="UTF-8">
+
+    <!-- Адаптивность -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <!-- Встроенные стили -->
+    <style>
+        body{
+            font-family: "Times New Roman", serif;
+            padding: 25px;
+        }
+
+        .form-row{
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        input, select{
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        table{
+            border-collapse: collapse; /* чтобы границы объединялись */
+            width: 100%;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        th, td{
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        th{
+            font-weight: bold;
+        }
+
+        .total{
+            height: 220px;
+            vertical-align: top;
+        }
+
+        a{
+            color: blue;
+            text-decoration: underline;
+            pointer-events: none; /* делаем ссылки некликабельными */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Заголовочный текст -->
+    <p>Заполните обязательные поля, чтобы добавить данные в таблицу</p>
+
+    <!-- ===== (некликабельный макет) ===== -->
+
+    <div class="form-row">
+        <!-- Выпадающий список -->
+        <label>Тип камушков:</label>
+        <select>
+            <option>сапфиры</option>
+            <option>рубины</option>
+            <option>алмазы</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <!-- Поле выбора даты -->
+        <label>Год:</label>
+        <input type="date">
+        <!-- Просто иконка галочки -->
+        <span>✅</span>
+    </div>
+
+    <div class="form-row">
+        <!-- Текстовое поле -->
+        <label>Количество:</label>
+        <input type="text">
+        <!-- Иконка крестика -->
+        <span>❌</span>
+    </div>
+
+    <!-- Кнопка без логики -->
+    <button>Отправить</button>
+
+    <!-- ===== ТАБЛИЦА ===== -->
+
+    <h2 style="text-align:center;">Добыча драгоценных камней</h2>
+
+    <table>
+
+        <!-- Шапка таблицы -->
+        <thead>
+            <tr>
+                <!--объединение по вертикали -->
+                <th rowspan="2">Камушек</th>
+
+                <!--объединение 3 столбцов -->
+                <th colspan="3">Год</th>
+            </tr>
+            <tr>
+                <th>2010</th>
+                <th>2012</th>
+                <th>2014</th>
+            </tr>
+        </thead>
+
+        <!-- Основное содержимое -->
+        <tbody>
+            <tr>
+                <td>Сапфиры</td>
+
+                <!-- Значение 1483 объединено на 2 строки -->
+                <td rowspan="2">1483</td>
+
+                <td>4532</td>
+                <td>6743</td>
+            </tr>
+
+            <tr>
+                <td>Рубины</td>
+                <td>3835</td>
+                <td>7482</td>
+            </tr>
+
+            <tr>
+                <td>Алмазы</td>
+                <td>683</td>
+
+                <!--объединяем 2012 и 2014 -->
+                <td colspan="2" style="text-align:center;">238</td>
+            </tr>
+
+            <!-- Итоговая строка -->
+            <tr>
+                <!-- Объединяем всю строку таблицы -->
+                <td colspan="4" class="total">
+
+                    <p><b>Итого:</b> много миллионов</p>
+
+                    <!-- Двухуровневый список -->
+                    <ol type="I">
+                        <li>
+                            Итого по видам драгоценных камней: много тысяч
+                            <ul>
+                                <li>
+                                    <a href="#">Сапфиров</a> немыслимое количество
+                                </li>
+                                <li>
+                                     <a href="#">рубинов</a> под конец всё же больше
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Итого по полудрагоценным камням
+                            <ul>
+                                <li><a href="#">Изумрудов</a> 0</li>
+                                <li><a href="#">Топазов</a> 0</li>
+                                <li><a href="#">Опалов</a> тоже 0</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
