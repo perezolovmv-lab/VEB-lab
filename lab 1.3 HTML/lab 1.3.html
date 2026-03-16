@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Путешествия</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 20px;
+    }
+    header, section, footer {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    nav a {
+      margin-right: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+      padding: 5px;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header id="country">
+  <h1>НАЗВАНИЕ СТРАНЫ</h1>
+</header>
+
+<section id="map">
+  <h2>Карта регионов</h2>
+  <p>Здесь будет SVG карта (пока просто заглушка)</p>
+</section>
+
+<section id="description">
+  <h2>Описание</h2>
+  <p>Красиво оформленный текст о стране</p>
+</section>
+
+<section id="weather">
+  <h2>Погода</h2>
+  <p>Прогноз погоды по регионам</p>
+</section>
+
+<section id="about">
+  <h2>О нас / о стране</h2>
+  <p>Краткая информация с цифрами</p>
+</section>
+
+<section id="contact-form">
+  <h2>Форма обратной связи / Задать вопрос</h2>
+  <form>
+    <label for="name">Имя:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="message">Сообщение:</label><br>
+    <textarea id="message" name="message"></textarea><br><br>
+    <input type="submit" value="Отправить">
+  </form>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <ul>
+    <li>Вопрос 1
+      <ul>
+        <li>Ответ 1</li>
+      </ul>
+    </li>
+    <li>Вопрос 2
+      <ul>
+        <li>Ответ 2</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="table">
+  <h2>Пример таблицы</h2>
+  <table>
+    <tr>
+      <th rowspan="2">Регион</th>
+      <th colspan="2">Погода</th>
+    </tr>
+    <tr>
+      <th>Температура</th>
+      <th>Осадки</th>
+    </tr>
+    <tr>
+      <td>Регион 1</td>
+      <td>20°C</td>
+      <td>10 мм</td>
+    </tr>
+    <tr>
+      <td>Регион 2</td>
+      <td>25°C</td>
+      <td>5 мм</td>
+    </tr>
+  </table>
+</section>
+
+<footer id="contacts">
+  <h2>Контакты</h2>
+  <p>Информация о контактах</p>
+</footer>
+
+<nav>
+  <a href="#country">Страна</a>
+  <a href="#map">Карта</a>
+  <a href="#description">Описание</a>
+  <a href="#weather">Погода</a>
+  <a href="#about">О стране</a>
+  <a href="#contact-form">Форма</a>
+  <a href="#faq">FAQ</a>
+  <a href="#table">Таблица</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+</body>
+</html>
