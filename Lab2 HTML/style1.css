@@ -1,0 +1,156 @@
+:root{
+  --bg: #345556;
+  --white: #ffffff;
+  --light: #eeeeee;
+  --mid: #d9d9d9;
+  --done: #8f8f8f;
+  --red: #a53535;
+  --text: #1d1d1d;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+
+  /* Центрирование блока */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Обёртка */
+.app{
+  width: min(1100px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Заголовок */
+.app__title{
+  margin: 0;
+  font-size: clamp(40px, 6vw, 84px);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Поле + кнопки */
+.controls{
+  width: min(1000px, 100%);
+  display: flex;
+}
+
+.controls__input{
+  flex: 1;
+  padding: 22px 26px;
+  border: none;
+  outline: none;
+  font-size: 26px;
+  background: var(--white);
+  color: #666;
+}
+
+.btn{
+  border: none;
+  padding: 22px 26px;
+  font-size: 26px;
+  cursor: default; /* макет */
+  width: 280px;
+}
+
+.btn--gray{ background: var(--mid); color: #000; }
+.btn--red{ background: var(--red); color: #000; }
+
+/* Адаптив: кнопки уходят вниз */
+@media (max-width: 900px){
+  .controls{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn{
+    width: 100%;
+  }
+}
+
+/* Список: скролл внутри, без прокрутки страницы */
+.list{
+  width: min(900px, 100%);
+}
+
+.list__scroll{
+  background: var(--light);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* Элемент */
+.item{
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 26px 24px;
+  color: var(--text);
+  background: var(--light);
+  transition: background .15s ease;
+}
+
+.item + .item{
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+/* Выполнено */
+.item--done{
+  background: var(--done);
+}
+
+.item__text{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.item__text--done{
+  text-decoration: line-through;
+  color: #f0f0f0;
+}
+
+/* Иконки + перекраска на hover */
+.item__icon{
+  font-size: 34px;
+  text-align: center;
+  color: #8a8a8a;
+  transition: color .15s ease;
+}
+
+/* фон строки меняется при наведении */
+.item:hover{
+  background: #cfcfcf;
+}
+
+/* иконки перекрашиваются, чтобы были различимы */
+.item:hover .item__icon{
+  color: #111;
+}
+
+/* в выполненной строке иконки светлые */
+.item--done .item__icon{
+  color: #f0f0f0;
+}
+
+/* ===== ПУСТОЕ СОСТОЯНИЕ (строго по центру страницы) ===== */
+.empty{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 600;
+  color: var(--white);
+}
